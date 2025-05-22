@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculadora de Preço de Viagem</title>
+</head>
+<body>
+
+  <h2>Calcular preço da viagem</h2>
+
+  <label>Tipo de carro:</label>
+  <select id="tipoCarro">
+    <option value="Comum">Comum</option>
+    <option value="Premium">Premium</option>
+    <option value="VIP">VIP</option>
+  </select>
+  <br><br>
+
+  <label>Distância (km):</label>
+  <input type="text" id="distanciaKm" />
+  <br><br>
+
+  <label>Dia da semana:</label>
+  <input type="text" id="diaSemana" />
+  <br><br>
+
+  <label>Hora:</label>
+  <input type="text" id="hora"/>
+  <br><br>
+
+  <button onclick="calcularPreco()">Calcular preço</button>
+
+  <h3 id="resultado"></h3>
+  <script src="javascript.js"></script>
+</body>
+</html>
