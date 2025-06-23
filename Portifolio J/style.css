@@ -1,0 +1,188 @@
+:root {
+    --first-color: hsl(38, 92%, 58%);
+    --first-color-light: hsl(38, 100%, 78%);
+    --first-color-alt: hsl(32, 75%, 50%);
+    --second-color: hsl(195, 75%, 52%);
+    --dark-color: hsl(212, 40%, 12%);
+    --white-color: hsl(212, 4%, 95%);
+    --body-color: hsl(212, 42%, 15%);
+    --container-color: hsl(212, 42%, 20%);
+
+    --body-font: sans-serif;
+    --h2-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--white-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    width: 300px;
+    height: 300px;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card__container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--body-color); /* ou qualquer fundo que quiser */
+}
+
+
+.card__content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: nowrap; /* <-- ISSO impede quebra de linha */
+    overflow-x: auto;  /* <-- Faz aparecer rolagem horizontal em telas pequenas */
+    padding: 2rem;
+}
+
+.card__article {
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background-color: var(--container-color);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* opcional: sombra bonita */
+}
+
+.card__image {
+    position: relative;
+    background-color: transparent;
+    padding-top: 1.5rem;
+    margin-bottom: -0.75rem;
+}
+
+.card__data {
+    background-color: var(--container-color);
+    padding: 1.5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.card__img {
+    width: 100%;
+    height: 350px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.card__shadow {
+    width: 200px;
+    height: 200px;
+    background-color: var(--first-color-alt);
+    border-radius: 50%;
+    position: absolute;
+    top: 3.75rem;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    filter: blur(45px);
+}
+
+.card__name {
+    font-size: var(--h2-font-size);
+    color: var(--second-color);
+    margin-bottom: 0.75rem;
+}
+
+.card__description {
+    font-weight: 500;
+    margin-bottom: 1.75rem;
+}
+
+.card__button {
+    display: inline-block;
+    background-color: var(--first-color);
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    color: var(--dark-color);
+    font-weight: 600;
+}
+
+/* Swiper classes */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+    content: "";
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    width: initial;
+    height: initial;
+    font-size: 3rem;
+    color: var(--second-color);
+    display: none;
+}
+
+.swiper-button-prev {
+    left: 0;
+}
+
+.swiper-button-next {
+    right: 0;
+}
+
+.swiper-pagination-bullet {
+    background-color: hsl(212, 32%, 40%);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--second-color);
+}
+
+@media screen and (max-width: 320px) {
+    .card__data {
+        padding: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .card__content {
+        margin-inline: 3rem;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+  .card__content {
+    max-width: 1120px;
+  }
+}

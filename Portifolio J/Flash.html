@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio | Arthur Andre</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1d2125;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  display: flex;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  max-width: 700px;
+  width: 100%;
+}
+
+.esquerda {
+  background: #4f8ef7;
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.foto {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  object-fit: cover;
+}
+
+.direita {
+  padding: 30px;
+  flex: 1;
+}
+
+h1 {
+  font-size: 26px;
+  color: #333;
+}
+
+h2 {
+  font-size: 18px;
+  color: #4f8ef7;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.botao {
+  padding: 10px 20px;
+  background: #4f8ef7;
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.botao:hover {
+  background: #2c6be0;
+}
+
+  </style>
+</head>
+<body>
+  <main class="card">
+    <section class="esquerda">
+      <img src="imagens/Image 23_06_2025, 17_11_39.png" alt="Foto de perfil" class="foto">
+    </section>
+
+    <section class="direita">
+      <h1>Arthur Andre</h1>
+      <h2>Desenvolvedor Full-Stack</h2>
+      <p>Olá! sou Estudante da fiap school estudando para ser Full-Stack</p>
+
+      <div class="botoes">
+        <a href="#" target="_blank" class="botao">GitHub</a>
+        <a href="#" target="_blank" class="botao">LinkedIn</a>
+        <a href="#" class="botao">Contato</a>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
