@@ -1,17 +1,19 @@
+/* Estilo 100% baseado em "pareceu uma boa ideia na hora" */
 :root {
-    --first-color: hsl(38, 92%, 58%);
-    --first-color-light: hsl(38, 100%, 78%);
-    --first-color-alt: hsl(32, 75%, 50%);
-    --second-color: hsl(195, 75%, 52%);
-    --dark-color: hsl(212, 40%, 12%);
-    --white-color: hsl(212, 4%, 95%);
-    --body-color: hsl(212, 42%, 15%);
-    --container-color: hsl(212, 42%, 20%);
+    --cor-principal: hsl(38, 92%, 58%);
+    --cor-principal-clara: hsl(38, 100%, 78%);
+    --cor-principal-alternativa: hsl(32, 75%, 50%);
+    --cor-secundaria: hsl(195, 75%, 52%);
+    --cor-escura: hsl(212, 40%, 12%);
+    --cor-branca: hsl(212, 4%, 95%);
+    --cor-fundo: hsl(212, 42%, 15%);
+    --cor-container: hsl(212, 42%, 20%);
 
-    --body-font: sans-serif;
-    --h2-font-size: 1.25rem;
-    --normal-font-size: 1rem;
+    --fonte-corpo: sans-serif;
+    --tamanho-fonte-h2: 1.25rem;
+    --tamanho-fonte-normal: 1rem;
 }
+
 html, body {
   height: 100%;
   margin: 0;
@@ -25,10 +27,10 @@ html, body {
 }
 
 body {
-    font-family: var(--body-font);
-    font-size: var(--normal-font-size);
-    background-color: var(--body-color);
-    color: var(--white-color);
+    font-family: var(--fonte-corpo);
+    font-size: var(--tamanho-fonte-normal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-branca);
 }
 
 a {
@@ -55,17 +57,16 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--body-color); /* ou qualquer fundo que quiser */
+  background-color: var(--cor-fundo);
 }
-
 
 .card__content {
     display: flex;
     justify-content: center;
     align-items: flex-start;
     gap: 2rem;
-    flex-wrap: nowrap; /* <-- ISSO impede quebra de linha */
-    overflow-x: auto;  /* <-- Faz aparecer rolagem horizontal em telas pequenas */
+    flex-wrap: nowrap;
+    overflow-x: auto; 
     padding: 2rem;
 }
 
@@ -74,11 +75,11 @@ img {
     max-width: 400px;
     border-radius: 1.25rem;
     overflow: hidden;
-    background-color: var(--container-color);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* opcional: sombra bonita */
+    background-color: var(--cor-container);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.card__image {
+.card__imagem {
     position: relative;
     background-color: transparent;
     padding-top: 1.5rem;
@@ -86,7 +87,7 @@ img {
 }
 
 .card__data {
-    background-color: var(--container-color);
+    background-color: var(--cor-container);
     padding: 1.5rem 2rem;
     border-radius: 1rem;
     text-align: center;
@@ -104,7 +105,7 @@ img {
 .card__shadow {
     width: 200px;
     height: 200px;
-    background-color: var(--first-color-alt);
+    background-color: var(--cor-principal-alternativa);
     border-radius: 50%;
     position: absolute;
     top: 3.75rem;
@@ -115,55 +116,23 @@ img {
 }
 
 .card__name {
-    font-size: var(--h2-font-size);
-    color: var(--second-color);
+    font-size: var(--tamanho-fonte-h2);
+    color: var(--cor-secundaria);
     margin-bottom: 0.75rem;
 }
 
-.card__description {
+.card__descricao {
     font-weight: 500;
     margin-bottom: 1.75rem;
 }
 
-.card__button {
+.card__botao {
     display: inline-block;
-    background-color: var(--first-color);
+    background-color: var(--cor-principal);
     padding: 0.75rem 1.5rem;
     border-radius: 0.25rem;
-    color: var(--dark-color);
+    color: var(--cor-escura);
     font-weight: 600;
-}
-
-/* Swiper classes */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-    content: "";
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-    width: initial;
-    height: initial;
-    font-size: 3rem;
-    color: var(--second-color);
-    display: none;
-}
-
-.swiper-button-prev {
-    left: 0;
-}
-
-.swiper-button-next {
-    right: 0;
-}
-
-.swiper-pagination-bullet {
-    background-color: hsl(212, 32%, 40%);
-    opacity: 1;
-}
-
-.swiper-pagination-bullet-active {
-    background-color: var(--second-color);
 }
 
 @media screen and (max-width: 720px) {
@@ -171,21 +140,21 @@ img {
         padding: 1rem;
     }
     .card__content {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10rem;
-    flex-wrap: wrap; 
-    padding: 1rem;
-    overflow-x: unset;
-}
-.card__img {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    margin: 0 auto;
-    position: relative;
-}
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 10rem;
+        flex-wrap: wrap; 
+        padding: 1rem;
+        overflow-x: unset;
+    }
+    .card__img {
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        margin: 0 auto;
+        position: relative;
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -193,14 +162,69 @@ img {
         margin-inline: 3rem;
         overflow-x: unset;
         justify-content: center;
-
     }
-
-    
 }
 
 @media screen and (min-width: 1520px) {
   .card__content {
     max-width: 1220px;
+  }
+}
+
+.navbar {
+  width: 100%;
+  background-color: var(--cor-container);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar__logo {
+  font-size: 1.5rem;
+  color: var(--cor-principal);
+  font-weight: bold;
+}
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.navbar__links li a {
+  color: var(--cor-secundaria);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.navbar__links li a:hover {
+  color: var(--cor-principal);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar__links {
+    flex-direction: column;
+    background-color: var(--cor-container);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    display: none;
+    padding: 1rem 2rem;
+  }
+
+  .navbar.active .navbar__links {
+    display: flex;
+  }
+
+  .navbar__toggle {
+    display: block;
+    cursor: pointer;
+    color: var(--cor-branca);
   }
 }
